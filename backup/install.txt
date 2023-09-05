@@ -1,0 +1,16 @@
+mkdir /logiciels/hana-backup
+chown root:sapsys /logiciels/hana-backup/
+chmod 775 /logiciels/hana-backup/
+wget "https://.../backup/hdbsql_wrapper.sh"
+chown root:sapsys /logiciels/hana-backup/hdbsql_wrapper.sh
+chmod 654 /logiciels/hana-backup/hdbsql_wrapper.sh
+mkdir /Backup/logs 
+chown root:sapsys /Backup/logs
+chmod 775 /Backup/logs
+
+##installation du fichier de config 
+wget "https://.../backup/SIG.config"
+chown kqgadm:sapsys  /logiciels/hana-backup/KQG.config
+chmod 754  /logiciels/hana-backup/KQG.config
+
+cp /home/$USERNAME/hdbsql_wrapper.sh  /logiciels/hana-backup/hdbsql_wrapper.sh
